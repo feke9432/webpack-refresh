@@ -1,0 +1,25 @@
+{
+  "name": "webpack-refresh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "server": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feke9432/webpack-refresh.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feke9432/webpack-refresh/issues"
+  },
+  "homepage": "https://github.com/feke9432/webpack-refresh#readme",
+  "devDependencies": {
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
