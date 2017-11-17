@@ -13,7 +13,7 @@ module.exports = {
     entry: __dirname + '/app/main.js',
     output: {
         path: __dirname + '/build',
-        filename: 'bundle.js'
+        filename: 'bundle-[hash].js'
     },
     /*
     * devServer: 构建本地服务器
@@ -62,6 +62,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: __dirname + "/app/index.tmpl.html" // new 一个插件实例，并传入相关参数。
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.UglifyJsPlugin()
     ]
 }

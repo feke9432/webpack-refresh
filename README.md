@@ -138,3 +138,15 @@ plugins: [
 ]
 ```
 再次执行 npm start 时，会自动生成 bundle.js 和 index.html
+
+2. UglifyJsPlugin : 压缩 js 代码
+压缩混淆在我看来是基本配置，这个插件不需要特殊安装，webpack 原声自带
+只要在配置文件中加入如下代码：
+```
+plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(), // 为组件分配最小id
+    new webpack.optimize.UglifyJsPlugin() // 压缩 js 文件
+]
+```
+## 缓存
+使用 hash 值处理文件名，以达到消除用户缓存，及时展现最新内容的目的。
