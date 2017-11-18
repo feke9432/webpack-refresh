@@ -15,6 +15,9 @@
 > 來源：简书
 
 ## 初步使用
+```
+npm install webpack --save-dev
+```
 在全局或局部安装 webpack 后，你可以使用下面格式的命令打包你的代码（不加大括号）
 ```
 webpack { entry file } { destination for bundled file }
@@ -23,6 +26,7 @@ webpack { entry file } { destination for bundled file }
 ```
 node_modules/.bin/webpack { entry file } { destination for bundled file }
 ```
+请勿使用 webpack 文件名。
 当然你也可以用配置文件来使用 webpack   
 在根目录建立名为 webpack.config.js 的配置文件，内容如下：
 ```

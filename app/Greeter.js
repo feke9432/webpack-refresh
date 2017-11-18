@@ -14,6 +14,7 @@ class Greeter extends Component {
     render() {
         return (
             <div className={style.root}>
+                <a href={config.urlStr}>{config.QQ}</a>
                 {config.greetText}
             </div>
         )
