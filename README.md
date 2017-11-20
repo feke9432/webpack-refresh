@@ -6,7 +6,7 @@
 
 > ## webpack 的工作原理  
 > 通过一个给定的主文件，从这个文件开始找到项目中所有的依赖文件，使用 loaders 处理
-> 他们，最后打包为一个或多个浏览器可以识别的 js 
+> 他们，最后打包为一个或多个浏览器可以识别的 js css 文件
 > ![来自官网](./md_lib/01.png)
 
 > ## 本文主要引用了：
@@ -14,6 +14,7 @@
 > 链接：<http://www.jianshu.com/p/42e11515c10f>
 > 來源：简书
 
+> ## Vue-cli 中使用 webpack 遇到的坑及解决办法
 ## 初步使用
 ```
 npm install webpack --save-dev
@@ -83,6 +84,18 @@ module: {
 的 webpack 安装及配置(配置如上)：
 ```
 npm install --save-dev babel-core babel-loader babel-preset-es2015 
+```
+之后在 module 中加入
+```
+{
+    test: /(\.jsx|\.js)$/, // 用以匹配 loaders 所处理的文件， 必须
+    use: {
+        loader: "babel-loader" // loader 的名称，必须
+    },
+    exclude: /node_modules/ // 忽略的文件，可选
+    // include: '', // 必须处理的文件， 可选
+    // query: ''    // 提供额外的设置选项， 可选
+}
 ```
 ### css-loader style-loader
 webpack 提供两个工具处理样式表，css-loader 和 style-loader ,
